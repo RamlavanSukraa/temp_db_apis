@@ -15,19 +15,10 @@
 
 from fastapi import FastAPI
 from routes.add_pres import router as add_pres_router
-from routes.update_pres import router as update_pres_router
-from routes.delete_pres import router as delete_pres_router
-from routes.get_pres_id import router as get_pres_id_router
-from routes.list_pres import router as list_pres_router
-from routes.insights_pres import router as insights_pres_router
+
 
 # Create FastAPI app
 app = FastAPI()
 
 # Include routes from separate files
 app.include_router(add_pres_router,tags=['Mongo DB APIS'])
-app.include_router(update_pres_router,tags=['Mongo DB APIS'])
-app.include_router(delete_pres_router,tags=['Mongo DB APIS'])
-app.include_router(get_pres_id_router,tags=['Mongo DB APIS'])
-app.include_router(list_pres_router,tags=['Mongo DB APIS'])
-app.include_router(insights_pres_router,tags=['Mongo DB APIS'])
